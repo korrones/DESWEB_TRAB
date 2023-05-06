@@ -1,0 +1,270 @@
+/* Definição de estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1ce02f1 ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar .logo a {
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-right: 20px;
+}
+
+.navbar .nav-links a {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #FFF;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.navbar .burger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .burger .line1,
+.navbar .burger .line2,
+.navbar .burger .line3 {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .burger {
+    display: block;
+  }
+
+  .navbar .burger.active .line1 {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .navbar .burger.active .line2 {
+    opacity: 0;
+  }
+
+  .navbar .burger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  .navbar .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5DEB3;
+    opacity: 0.95;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links a {
+    font-size: 28px;
+  }
+
+  .navbar .nav-links.active {
+    transform: translateX(0%);
+  }
+}
+header {
+background-color: #333;
+color: #fff;
+padding: 10px;
+}
+
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+display: inline-block;
+margin-right: 20px;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Estilos do banner */
+.banner {
+    background-image: url('https://www.example.com/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta {
+    background-color: #f1ce02f1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta:hover {
+    background-color: #f1ce02f1;
+}
+
+/* Estilos da seção de serviços */
+.services {
+    padding: 50px;
+    background-color: #f1ce02f1;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services li {
+    display: inline-block;
+    width: 30%;
+    margin-right: 5%;
+    vertical-align: top;
+}
+
+.services h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 16px;
+}
+
+/* Estilos da seção Sobre */
+.about {
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos da seção de Contato */
+.contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.contact button {
+    background-color: #f1ce02f1;
+    color: #fff;
+    padding: 10px 20px;
+}
+
